@@ -1,7 +1,32 @@
-<!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
-
-<web-app>
-  <display-name>Archetype Created Web Application</display-name>
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<context-param>
+		<param-name>contextClass</param-name>
+		<param-value>com.jerseydemo.core.config.SpringXmlWebApplicationContext</param-value>
+	</context-param>
+	
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+	</listener>
+	
+	<filter>
+		<filter-name>Jersey-Spring-Integration</filter-name>
+		<filter-class>com.sun.jersey.spi.spring.container.servlet.SpringServlet</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>Jersey-Spring-Integration</filter-name>
+		<url-pattern>/jservice/*</url-pattern>
+	</filter-mapping>
+	
+	<servlet>
+		<servlet-name>DemoServlet</servlet-name>
+		<servlet-class>com.jerseydemo.core.servlet.JerseyDemoServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DemoServlet</servlet-name>
+		<url-pattern>/testService/testRequest</url-pattern>
+	</servlet-mapping>
 </web-app>
