@@ -12,13 +12,11 @@ import org.springframework.stereotype.Component;
 @Component
 @Scope("singleton")
 @Path("/jservice/demoserver")
-public class DemoServer
-{
+public class DemoServer {
 	@Produces({ MediaType.APPLICATION_XML, MediaType.TEXT_XML })
 	@Consumes({ MediaType.APPLICATION_XML, MediaType.TEXT_XML })
 	@POST
-	public String service(String reqStr)
-	{
+	public String service(String reqStr) {
 		System.out.println("[%DemoServer Process Begin%]");
 		System.out.println(reqStr);
 		String result = getResult("baseSubRequest", "100");
@@ -33,8 +31,7 @@ public class DemoServer
 	 * @param result
 	 * @return
 	 */
-	public String getResult(String funtion, String result)
-	{
+	public String getResult(String funtion, String result) {
 		StringBuilder sb = new StringBuilder();
 		sb.append("<demoMessage><function>");
 		sb.append(funtion);

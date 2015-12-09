@@ -1,7 +1,6 @@
 package com.jerseydemo.jersey.vo;
 
-public class Body
-{
+public class Body {
 	private String mobileNo;
 	private Integer reqSource;
 	private String reqTime;
@@ -11,83 +10,67 @@ public class Body
 	private Integer actionReason;
 	private String result;
 
-	public String getMobileNo()
-	{
+	public String getMobileNo() {
 		return mobileNo;
 	}
 
-	public void setMobileNo(String mobileNo)
-	{
+	public void setMobileNo(String mobileNo) {
 		this.mobileNo = mobileNo;
 	}
 
-	public Integer getReqSource()
-	{
+	public Integer getReqSource() {
 		return reqSource;
 	}
 
-	public void setReqSource(Integer reqSource)
-	{
+	public void setReqSource(Integer reqSource) {
 		this.reqSource = reqSource;
 	}
 
-	public String getReqTime()
-	{
+	public String getReqTime() {
 		return reqTime;
 	}
 
-	public void setReqTime(String reqTime)
-	{
+	public void setReqTime(String reqTime) {
 		this.reqTime = reqTime;
 	}
 
-	public Integer getIsBatch()
-	{
+	public Integer getIsBatch() {
 		return isBatch;
 	}
 
-	public void setIsBatch(Integer isBatch)
-	{
+	public void setIsBatch(Integer isBatch) {
 		this.isBatch = isBatch;
 	}
 
-	public Integer getIsMessage()
-	{
+	public Integer getIsMessage() {
 		return isMessage;
 	}
 
-	public void setIsMessage(Integer isMessage)
-	{
+	public void setIsMessage(Integer isMessage) {
 		this.isMessage = isMessage;
 	}
 
-	public String getExt()
-	{
+	public String getExt() {
 		return ext;
 	}
 
-	public void setExt(String ext)
-	{
+	public void setExt(String ext) {
 		this.ext = ext;
 	}
 
-	public Integer getActionReason()
-	{
+	public Integer getActionReason() {
 		return actionReason;
 	}
 
-	public void setActionReason(Integer actionReason)
-	{
+	public void setActionReason(Integer actionReason) {
 		this.actionReason = actionReason;
 	}
 
-	public String getResult()
-	{
+	public String getResult() {
 		return result;
 	}
 
-	public void setResult(String result)
-	{
+	public void setResult(String result) {
 		this.result = result;
 	}
 }

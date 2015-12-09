@@ -8,13 +8,12 @@ import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource;
 
-public class DemoClient
-{
+public class DemoClient {
 	private Client client = Client.create();
 	private WebResource webResource = client.resource("http://127.0.0.1:8080/jerseydemo/jservice/demoserver");
-	
-	public int baseSubRequest(String mobileNo, int reqSource, String reqTime, int isBatch, int isMessage, int actionReason, String ext)
-	{
+
+	public int baseSubRequest(String mobileNo, int reqSource, String reqTime, int isBatch, int isMessage,
+			int actionReason, String ext) {
 		DemoMessage message = new DemoMessage();
 		Body body = new Body();
 

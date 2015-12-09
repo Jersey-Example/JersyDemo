@@ -8,28 +8,23 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(propOrder = { "function", "body" })
 @XmlRootElement
-public class DemoMessage
-{
+public class DemoMessage {
 	private String function;
 	private Body body;
 
-	public String getFunction()
-	{
+	public String getFunction() {
 		return function;
 	}
 
-	public void setFunction(String function)
-	{
+	public void setFunction(String function) {
 		this.function = function;
 	}
 
-	public Body getBody()
-	{
+	public Body getBody() {
 		return body;
 	}
 
-	public void setBody(Body body)
-	{
+	public void setBody(Body body) {
 		this.body = body;
 	}
 }

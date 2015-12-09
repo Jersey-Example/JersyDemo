@@ -7,7 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.jerseydemo.jsersey.client.DemoClient;
+import com.jerseydemo.jersey.client.DemoClient;
+
 
 /**
  * @author 	Administrator

@@ -9,23 +9,19 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.jerseydemo.jersey.client.DemoClient;
 
-public class JerseyDemoServlet extends HttpServlet
-{
+public class JerseyDemoServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
-	{
+	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doPost(request, response);
 	}
 
-	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
-	{
+	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		DemoClient client = new DemoClient();
 		request.setCharacterEncoding("UTF-8");
 		String reqType = request.getParameter("reqType");
 		int result = -1;
-		if ("baseSubRequest".equals(reqType))
-		{
+		if ("baseSubRequest".equals(reqType)) {
 			String mobileNo = request.getParameter("mobileNo");
 			int reqSource = Integer.parseInt(request.getParameter("reqSource"));
 			String reqTime = request.getParameter("reqTime");
